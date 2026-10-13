@@ -159,17 +159,14 @@ function initFormValidation() {
     const isMessageValid = validateMessage();
 
     if (isNameValid && isEmailValid && isMessageValid) {
-      // Temporarily disable the button to prevent multiple submissions
       const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '<span>Send Message</span>';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span>Sending Message...</span>';
       }
 
-      // Prepare form payload
       const formData = new FormData(form);
 
-      // Send asynchronous POST request to Formspree endpoint
       fetch('https://formspree.io/f/xyeknjjg', {
         method: 'POST',
         body: formData,
@@ -179,20 +176,16 @@ function initFormValidation() {
       })
       .then(async (response) => {
         if (response.ok) {
-          // Show success feedback banner
           formStatus.className = 'form-status show-success';
           formStatus.innerHTML = `<strong>Thank you, ${nameInput.value.trim()}!</strong> Your message has been sent successfully to Cian. I will get back to you shortly.`;
 
-          // Clear form fields
           form.reset();
 
-          // Automatically hide banner after 8 seconds
           setTimeout(() => {
             formStatus.className = 'form-status';
             formStatus.textContent = '';
           }, 8000);
         } else {
-          // Handle Formspree validation or server response error
           const data = await response.json().catch(() => ({}));
           formStatus.className = 'form-status show-error';
           if (data && data.errors && data.errors.length > 0) {
@@ -203,20 +196,17 @@ function initFormValidation() {
         }
       })
       .catch((error) => {
-        // Handle network connection error
         console.error('Submission network error:', error);
         formStatus.className = 'form-status show-error';
         formStatus.textContent = 'Network error: Could not reach the email server. Please check your connection or email me directly at ciandelacruz10@gmail.com.';
       })
       .finally(() => {
-        // Restore submit button state
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnHtml;
         }
       });
     } else {
-      // Show warning feedback banner
       formStatus.className = 'form-status show-error';
       formStatus.textContent = 'Please fill out all required fields with valid information before submitting.';
     }
