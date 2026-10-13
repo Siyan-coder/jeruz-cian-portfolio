@@ -1,22 +1,11 @@
-/* ==========================================================================
-   PORTFOLIO STYLESHEET - BLUE GLASSMORPHISM THEME
-   Author: Cian Marco Jeruz
-   Course: CC107 - Application Development (Web Platforms)
-   Activity: Activity 4 - Personal Web Portfolio
-   ========================================================================== */
 
-/* ==========================================================================
-   1. CSS Custom Properties / Design Tokens (:root)
-   ========================================================================== */
 :root {
-  /* Color Palette - Deep Navy, Midnight Blue & Gradients */
   --bg-navy-950: #0a0f1d;
   --bg-navy-900: #0f172a;
   --bg-navy-800: #132040;
   --bg-blue-900: #1e3a8a;
   --bg-gradient: linear-gradient(145deg, #0a0f1d 0%, #0f172a 40%, #1e3a8a 100%);
 
-  /* Accent Blues (Glows, Buttons, Highlights) */
   --accent-blue: #3b82f6;
   --accent-blue-light: #60a5fa;
   --accent-blue-dark: #1d4ed8;
@@ -24,13 +13,12 @@
   --accent-glow: rgba(59, 130, 246, 0.45);
   --accent-glow-subtle: rgba(59, 130, 246, 0.15);
 
-  /* Typography Colors */
+
   --text-primary: #f8fafc;
   --text-secondary: #e2e8f0;
   --text-muted: #94a3b8;
   --text-link: #60a5fa;
 
-  /* Glassmorphism Surface Tokens */
   --glass-bg: rgba(255, 255, 255, 0.07);
   --glass-bg-hover: rgba(255, 255, 255, 0.12);
   --glass-border: 1px solid rgba(255, 255, 255, 0.18);
@@ -39,17 +27,14 @@
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   --glass-shadow-hover: 0 16px 40px 0 rgba(0, 0, 0, 0.5), 0 0 25px rgba(59, 130, 246, 0.25);
 
-  /* Navbar Tokens */
   --navbar-bg: rgba(15, 23, 42, 0.85);
   --navbar-border: 1px solid rgba(255, 255, 255, 0.12);
 
-  /* Input & Form Tokens */
   --input-bg: rgba(255, 255, 255, 0.06);
   --input-border: 1px solid rgba(255, 255, 255, 0.2);
   --input-focus-border: #60a5fa;
   --input-focus-glow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 0 16px rgba(59, 130, 246, 0.25);
 
-  /* Validation Colors */
   --color-error: #f87171;
   --color-error-bg: rgba(239, 68, 68, 0.15);
   --color-error-border: rgba(239, 68, 68, 0.45);
@@ -57,7 +42,6 @@
   --color-success-bg: rgba(34, 197, 94, 0.15);
   --color-success-border: rgba(34, 197, 94, 0.45);
 
-  /* Layout, Radius & Spacing */
   --container-max-width: 1080px;
   --section-padding-y: 5rem;
   --radius-sm: 8px;
@@ -65,18 +49,13 @@
   --radius-card: 18px;
   --radius-full: 9999px;
 
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s ease;
 
-  /* Typography Stack */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* ==========================================================================
-   2. Base Reset & Global Styles
-   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -109,7 +88,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Defaults */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   font-weight: 700;
@@ -132,9 +110,6 @@ img {
   display: block;
 }
 
-/* ==========================================================================
-   3. Main Layout Container & Section Formatting
-   ========================================================================== */
 main {
   width: 100%;
   max-width: var(--container-max-width);
@@ -147,7 +122,6 @@ section {
   scroll-margin-top: 5.5rem;
 }
 
-/* Section Header & Subtitle */
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -178,7 +152,6 @@ section {
   margin-top: 0.75rem;
 }
 
-/* Common UI Elements & Buttons */
 .badge {
   display: inline-block;
   background: rgba(59, 130, 246, 0.18);
@@ -236,9 +209,6 @@ section {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* ==========================================================================
-   4. Header & Navigation (Flexbox Layout)
-   ========================================================================== */
 .navbar {
   position: sticky;
   top: 0;
@@ -274,7 +244,6 @@ section {
   text-shadow: 0 0 12px var(--accent-glow);
 }
 
-/* Navigation Links */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -304,7 +273,6 @@ section {
   border: 1px solid rgba(96, 165, 250, 0.25);
 }
 
-/* Mobile Hamburger Button (Hidden on Desktop) */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -347,9 +315,6 @@ section {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* ==========================================================================
-   5. Hero / About Me Section (Flexbox Layout)
-   ========================================================================== */
 .about-section {
   display: flex;
   justify-content: center;
@@ -425,9 +390,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* ==========================================================================
-   6. Projects Section (CSS Grid Layout)
-   ========================================================================== */
 .projects-section {
   width: 100%;
 }
@@ -544,9 +506,6 @@ section {
   transform: translateX(5px);
 }
 
-/* ==========================================================================
-   7. Skills Section (Flexbox Layout)
-   ========================================================================== */
 .skills-section {
   width: 100%;
 }
@@ -584,9 +543,6 @@ section {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   8. Contact Section & Interactive Form
-   ========================================================================== */
 .contact-section {
   width: 100%;
 }
@@ -608,7 +564,6 @@ section {
   border-color: rgba(255, 255, 255, 0.28);
 }
 
-/* Status Banner / Feedback Container */
 .form-status {
   display: none;
   padding: 1rem 1.25rem;
@@ -633,7 +588,6 @@ section {
   color: var(--color-error);
 }
 
-/* Contact Form Layout */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -684,7 +638,6 @@ section {
   box-shadow: var(--input-focus-glow);
 }
 
-/* Error validation styling on inputs */
 .form-group.has-error input,
 .form-group.has-error textarea {
   border-color: var(--color-error);
@@ -710,9 +663,6 @@ section {
   font-size: 1.05rem;
 }
 
-/* ==========================================================================
-   9. Footer Section (Flexbox Layout)
-   ========================================================================== */
 .footer {
   width: 100%;
   background: rgba(10, 15, 29, 0.92);
@@ -799,22 +749,16 @@ section {
   text-shadow: 0 0 8px var(--accent-glow);
 }
 
-/* ==========================================================================
-   10. Responsive Design (@media queries)
-   ========================================================================== */
 
-/* Tablet & Mobile Screens (max-width: 768px) */
 @media (max-width: 768px) {
   :root {
     --section-padding-y: 3.5rem;
   }
 
-  /* Show mobile hamburger menu */
   .menu-toggle {
     display: flex;
   }
 
-  /* Mobile slide-down navigation drawer */
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -844,7 +788,6 @@ section {
     font-size: 1.05rem;
   }
 
-  /* Hero Section responsive flex layout */
   .about-card {
     flex-direction: column;
     text-align: center;
@@ -873,18 +816,15 @@ section {
     justify-content: center;
   }
 
-  /* Projects Section Grid */
   .project-list {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }
 
-  /* Contact Form adjustments */
   .contact-card {
     padding: 2rem 1.5rem;
   }
 
-  /* Footer stack */
   .footer-container {
     flex-direction: column;
     gap: 2rem;
@@ -897,7 +837,6 @@ section {
   }
 }
 
-/* Small Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
   .section-header h2 {
     font-size: 1.85rem;
@@ -917,7 +856,6 @@ section {
   }
 }
 
-/* Keyframe Animations */
 @keyframes fadeInDown {
   from {
     opacity: 0;
