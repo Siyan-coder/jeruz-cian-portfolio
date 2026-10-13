@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cian Marco Jeruz | Web Portfolio</title>
+  <meta name="description" content="Personal web portfolio of Cian Marco Jeruz - Front-End Developer and BSIT Student at Bulacan State University.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. Header / Navigation Section
+       ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#about" class="logo">Cian Marco Jeruz</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        class="menu-toggle" 
+        id="menuToggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="navMenu"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Main Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Main Content Area
+       ========================================== -->
+  <main>
+    <!-- ==========================================
+         2. Hero / About Me Section
+         ========================================== -->
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <div class="profile-image-wrapper">
+          <img 
+            src="assets/profile.jpg" 
+            alt="Portrait photo of Cian Marco Jeruz" 
+            class="profile-image"
+          >
+        </div>
+        <div class="about-content">
+          <span class="badge">Front-End Developer</span>
+          <h1>Hi, I am Cian Marco Jeruz</h1>
+          <p class="institution-text">
+            BSIT 3H-G1 Student from <strong>Bulacan State University - Main Campus</strong>.
+          </p>
+          <p class="bio-text">
+            I am a front-end developer who enjoys designing and building user-friendly web applications.
+            I have a strong passion for creating intuitive, responsive, and visually appealing interfaces
+            that deliver an exceptional user experience.
+          </p>
+          <div class="about-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. Projects Section
+         ========================================== -->
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">A collection of systems and design work I have developed</p>
+      </div>
+
+      <div class="project-list">
+        <!-- Project Card 1 -->
+        <article class="project-card">
+          <div class="project-image-container">
+            <img 
+              src="assets/project1.jpg" 
+              alt="Lupon Cooperative Survey Management System preview" 
+              class="project-preview" 
+              loading="lazy"
+            >
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Web App</span>
+              <span class="tag">Data Management</span>
+            </div>
+            <h3>Lupon Cooperative Survey Management System</h3>
+            <p>
+              A management system for Lupon Cooperative Survey, designed to streamline survey processes
+              and enhance data collection efficiency.
+            </p>
+            <div class="project-card-footer">
+              <a href="#contact" class="project-link" aria-label="Learn more about Lupon Cooperative Survey Management System">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card">
+          <div class="project-image-container">
+            <img 
+              src="assets/project2.png" 
+              alt="Cinephile - Cinema Booking System preview" 
+              class="project-preview" 
+              loading="lazy"
+            >
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">Booking System</span>
+            </div>
+            <h3>Cinephile - Cinema Booking System</h3>
+            <p>
+              A high-fidelity cinema booking system that allows users to browse movies, select seats,
+              and make reservations online with ease.
+            </p>
+            <div class="project-card-footer">
+              <a href="#contact" class="project-link" aria-label="Learn more about Cinephile Cinema Booking System">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card">
+          <div class="project-image-container">
+            <img 
+              src="assets/project3.png" 
+              alt="Farewell, G2 Pubmat promotional graphic preview" 
+              class="project-preview" 
+              loading="lazy"
+            >
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Graphic Design</span>
+              <span class="tag">Publication</span>
+            </div>
+            <h3>Farewell, G2 Pubmat</h3>
+            <p>
+              A pubmat designed for the farewell event of G2, crafted to capture cherished memories
+              and celebrate the group's collective milestones.
+            </p>
+            <div class="project-card-footer">
+              <a href="#contact" class="project-link" aria-label="Learn more about Farewell G2 Pubmat">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Skills Section
+         ========================================== -->
+    <section id="skills" class="skills-section">
+      <div class="section-header">
+        <h2>Skills & Technologies</h2>
+        <p class="section-subtitle">Tools and technologies I use to craft digital experiences</p>
+      </div>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Responsive Web Design</li>
+        <li>UI/UX Design</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- ==========================================
+         4. Contact Section
+         ========================================== -->
+    <section id="contact" class="contact-section">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations or project inquiries</p>
+      </div>
+
+      <div class="contact-card">
+        <!-- Live Alert Status Message (Updated via JavaScript) -->
+        <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Your full name"
+              autocomplete="name"
+            >
+            <small class="error-message" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="your.email@example.com"
+              autocomplete="email"
+            >
+            <small class="error-message" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              placeholder="Write your message here..."
+            ></textarea>
+            <small class="error-message" id="messageError"></small>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       Footer / Social Handles & Contact Info
+       ========================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#about" class="footer-logo">Cian Marco Jeruz</a>
+        <p class="footer-tagline">Front-End Developer & BSIT Student at BulSu Main</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Connect & Socials</h4>
+        <div class="social-links">
+          <a href="mailto:ciandelacruz10@gmail.com" class="social-link" title="Send Email">
+            <span class="social-text">Email: ciandelacruz10@gmail.com</span>
+          </a>
+          <a href="https://github.com/Siyan-coder" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+            <span class="social-text">GitHub: @Siyan-coder</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+            <span class="social-text">LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cian Marco Jeruz. All rights reserved.</p>
+      <a href="#navbar" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- External JavaScript file with interactive features -->
+  <script src="script.js"></script>
+</body>
+</html>
