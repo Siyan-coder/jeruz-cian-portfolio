@@ -7,12 +7,12 @@ A single-page personal portfolio website built with semantic **HTML5**, **CSS3**
 ## 📁 Project Structure
 
 ```text
-cian-jeruz-portfolio-html/
-├── index.html            # Main HTML5 document with semantic markup
-├── style.css             # Separate stylesheet (Flexbox/Grid, glassmorphism, responsive)
-├── script.js             # Separate JavaScript file (fully commented interactive features)
-├── README.md             # Project documentation and deployment guide
-└── assets/               # Image assets (profile photo, project previews)
+jeruz-cian-portfolio/
+├── index.html            
+├── style.css             
+├── script.js             
+├── README.md             
+└── assets/               
     ├── profile.jpg
     ├── project1.jpg
     ├── project2.png
